@@ -1,6 +1,6 @@
 var Thermostat = function(){
   this.temperature = 20;
-  this.powerSavemode = false
+  this.powerSavemode = true
 };
 
 Thermostat.prototype.increaseBy = function (number) {
@@ -30,36 +30,6 @@ Thermostat.prototype.decreaseBy = function (number) {
 
 };
 
-
-// Javabuzz.prototype._isDivisibleBy = function (number, divisor) {
-//   return (number % divisor === 0);
-//
-// };
-//
-// Javabuzz.prototype.isDivisibleByThree = function(number) {
-//   return this._isDivisibleBy(number, 3);
-//
-// };
-//
-// Javabuzz.prototype.isDivisibleByFive = function(number) {
-//   return this._isDivisibleBy(number, 5);
-//
-// };
-//
-// Javabuzz.prototype.isDivisibleByFifteen = function(number) {
-//   return this._isDivisibleBy(number, 15);
-//
-// };
-//
-// Javabuzz.prototype.says = function(number) {
-//   if (this.isDivisibleByFifteen(number)) {
-//       return "Javabuzz";
-//     }
-//     if (this.isDivisibleByThree(number)) {
-//       return "Java";
-//     }
-//     if (this.isDivisibleByFive(number)) {
-//        return "Buzz";
-//     }
-//     return number;
-  // };
+Thermostat.prototype.resetTemp = function() {
+  return this.temperature = 20;
+};
