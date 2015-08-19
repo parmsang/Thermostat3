@@ -17,7 +17,6 @@ Thermostat.prototype.increaseBy = function (number) {
       return this.temperature = this.temperature + number;
     }
   }
-
 };
 
 Thermostat.prototype.decreaseBy = function (number) {
@@ -27,7 +26,6 @@ Thermostat.prototype.decreaseBy = function (number) {
   } else {
     return this.temperature = this.temperature - number;
   }
-
 };
 
 Thermostat.prototype.resetTemp = function() {
