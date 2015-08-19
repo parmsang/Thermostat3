@@ -4,7 +4,7 @@ var Thermostat = function(){
 };
 
 Thermostat.prototype.increaseBy = function (number) {
-  if (this.powerSavemode == true) {
+  if (this.powerSavemode) {
     if ((this.temperature + number) > 25) {
       return "temperature exceeded maximum";
     } else {
@@ -32,4 +32,12 @@ Thermostat.prototype.decreaseBy = function (number) {
 
 Thermostat.prototype.resetTemp = function() {
   return this.temperature = 20;
+};
+
+Thermostat.prototype.psmswitch = function() {
+  if (this.powerSavemode) {
+    this.powerSavemode = false;
+  } else {
+    this.powerSavemode = true;
+  }
 };
